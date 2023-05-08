@@ -25,7 +25,7 @@ jobs:
       #     pip install -r requirements.txt
       - name: execute py script
         env:
-          BLOB_SECRET: ${{ secrets.BLOB_SECRET1 }}
-        run : |
-          echo $BLOB_SECRET1
-        # run: python app.py $BLOB_SECRET
+          BLOB_SECRET: ${{ secrets.BLOB_SECRET }}
+        # run : |
+        #   echo $BLOB_SECRET 
+        run: python app.py $BLOB_SECRET
