@@ -1,3 +1,3 @@
 import sys
 
-print(f"Get Secret: ${sys.argv[1]}")
+print(f"Get Secret: {sys.argv[1]}")

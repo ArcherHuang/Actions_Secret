@@ -6,6 +6,9 @@ on:
     branches:
       - main
 
+env: 
+  BLOB_SECRET: ${{ secrets.BLOB_SECRET }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,4 +24,4 @@ jobs:
       #     python -m pip install --upgrade pip
       #     pip install -r requirements.txt
       - name: execute py script
-        run: python app.py ${{ secrets.BLOB_SECRET }}
+        run: python app.py $BLOB_SECRET
